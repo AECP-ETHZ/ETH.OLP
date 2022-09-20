@@ -1,0 +1,17 @@
+Package: ETH.OLP
+Title: Optimierung Landwirtschaftlicher Produktionssysteme
+Version: 0.2
+Authors@R: 
+    person("Damian", "Oswald", , "damoswa@student.ethz.ch", role = "cre",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Supplementary package for the ETH course "Optimierung Landwirtschaftlicher Produktionssysteme".
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+Imports:
+	lpSolve,
+	lhs,
+	sensitivity,
+	Rsolnp

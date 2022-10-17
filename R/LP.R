@@ -24,7 +24,17 @@
 #' print(LP1)
 #' 
 #' @export
-LP <- function(c, A, b, maximize = TRUE, directions = rep("<=", length(b)), integer = NULL, binary = NULL) {
+LP <- function(c, A, b, maximize = TRUE, directions = NULL, integer = NULL, binary = NULL) {
+   
+   # Set directions if they are missing:
+   if (is.null(directions)){
+      if(maximize){
+         directions <- rep("<=", length(b))
+      }
+      else {
+         directions <- rep(">=", length(b))
+      }
+   }
    
    # Adopt the rownames from A, if they exist.
    if (!is.null(rownames(A))){

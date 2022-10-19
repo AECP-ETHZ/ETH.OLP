@@ -21,11 +21,11 @@ simulate.LP <- function(LP, n = 1000, range = 0.5){
    } else {
       stop("Please use either a single numeric value or a valid matrix as \"range\".")
    }
-   Y <- apply(data, 1, function(x) {
+   Y <- t(apply(data, 1, function(x) {
       LP$c <- x
       LP <- update(LP)
       c(Objective = LP$objective_value, LP$solution)
-      }) |> t()
+      }))
    data <- list(Input = data, Output = as.data.frame(Y))
    class(data) <- "simdata"
    return(data)

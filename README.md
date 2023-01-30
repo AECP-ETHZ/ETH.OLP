@@ -1,6 +1,6 @@
 # The R package ETH.OLP
 
-This is the repository for the R package "ETH.OLP" which was developed for the couse "Optimierung Landwirtschaflicher Produktionssysteme".
+This is the repository for the R package "ETH.OLP" which was developed for the course "Optimierung Landwirtschaflicher Produktionssysteme".
 The package containing various functions for linear programming and positive mathematical programming.
 
 *Please make sure to use this package with R Version 4.1 or higher.*
